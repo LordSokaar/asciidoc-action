@@ -1,0 +1,20 @@
+name: 'build asciidoc action'
+author: 'LordAshram'
+description: 'asciidoc build action'
+
+branding:
+  icon: 'file'
+  color: 'green'
+inputs:
+    program:
+        description: 'asciidoctor '
+        required: true
+        default: 'asciidoctor -D docs -r asciidoctor-diagram --backend=html5 -o index.html docs/readme.adoc'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.program }}
+outputs:
+    time:
+        description: 'Action Completed'
