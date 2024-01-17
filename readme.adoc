@@ -1,4 +1,4 @@
-To use this action :
+To use this action simply:
 
 [source, yaml]
 ----
