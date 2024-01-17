@@ -11,6 +11,3 @@ RUN apk update && \
     apk add graphicsmagick-dev ruby-dev musl-dev gcc && \
     gem install prawn-gmagick && \
     gem install asciidoctor-diagram
-
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
